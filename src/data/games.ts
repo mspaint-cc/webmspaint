@@ -14,4 +14,11 @@ export const gamesList = [
   "Grow A Garden",
   "Forsaken",
   "99 Nights In The Forest",
+  "Fortnite",
+  "FORTNITE",
+  "Fortntie",
+  "LEGO FORTNITE",
+  "FORTNITE BATTLE ROYALE",
+  "FORTNITE FESTIVAL",
+  "Fortnite",
 ];
