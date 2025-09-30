@@ -189,4 +189,13 @@ export const MenuMapping = {
     Game: "Universal",
     DataURL: GetUIDataURL("universal"),
   }),
+  ...SetupGameMapping("Fortnite", {
+    Game: "Fortnite",
+    DataURL: GetUIDataURL("fortnite"),
+  }),
+  ...SetupGameMapping("Fortntie", {
+    Game: "Fortntie",
+    DataURL: GetUIDataURL("fortnite"),
+  }),
+
 };
