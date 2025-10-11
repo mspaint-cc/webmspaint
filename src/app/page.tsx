@@ -87,7 +87,7 @@ export default async function Home() {
             width={25}
             height={25}
           />
-          <p className="font-bold text-inherit">mspaint</p>
+          <p className="font-bold text-inherit">mspaint — FORTNITE</p>
         </NavbarBrand>
 
         <NavbarContent justify="end" className="mt-4 mb-4">
@@ -149,7 +149,7 @@ export default async function Home() {
                 <BlurFade delay={0.2 + 3 * 0.05}>
                   <div className="text-2xl flex flex-row justify-center items-center  gap-2">
                     <span className="font-bold">The best</span>{" "}
-                    <WordRotate duration={2500} words={gamesList} /> script
+                    <WordRotate duration={1500} words={gamesList} /> script — FORTNITE
                   </div>
                 </BlurFade>
 
@@ -280,6 +280,52 @@ export default async function Home() {
             delay={0.2 + 2 * 0.05}
             inView
           >
+            <GameCard
+              title={"Fortntie"}
+              id={undefined}
+              url={"https://www.epicgames.com/fortnite"}
+              image={`/icon.png`}
+              gamesStatusData={gamesStatusData}
+            />
+
+            <GameCard
+              title={"FORTNITE BATTLE ROYALE"}
+              id={undefined}
+              url={"https://www.epicgames.com/fortnite"}
+              image={`/icon.png`}
+              gamesStatusData={gamesStatusData}
+            />
+
+            <GameCard
+              title={"FORTNITE FESTIVAL"}
+              id={undefined}
+              url={"https://www.epicgames.com/fortnite"}
+              image={`/icon.png`}
+              gamesStatusData={gamesStatusData}
+            />
+
+            <GameCard
+              title={"LEGO FORTNITE"}
+              id={undefined}
+              url={"https://www.epicgames.com/fortnite"}
+              image={`/icon.png`}
+              gamesStatusData={gamesStatusData}
+            />
+            <GameCard
+              title={"FORTNITE"}
+              id={undefined}
+              url={"https://www.epicgames.com/fortnite"}
+              image={`/icon.png`}
+              gamesStatusData={gamesStatusData}
+            />
+
+            <GameCard
+              title={"Fortnite"}
+              id={undefined}
+              url={"https://www.epicgames.com/fortnite"}
+              image={`/icon.png`}
+              gamesStatusData={gamesStatusData}
+            />
             <GameCard
               title={"DOORS"}
               id={6516141723}
