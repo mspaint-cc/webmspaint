@@ -14,4 +14,14 @@ export const RESELLER_DATA = {
       webhook: process.env.ROBLOXCHEATZ_WEBHOOK!,
       discord: "https://discord.gg/ilya",
     },
+    fortnite: {
+      name: "Fortnite",
+      webhook: process.env.FORTNITE_WEBHOOK!,
+      discord: "https://discord.gg/fortnite",
+    },
+    fortntie: {
+      name: "Fortntie",
+      webhook: process.env.FORTNITE_WEBHOOK!,
+      discord: "https://discord.gg/fortnite",
+    },
 };

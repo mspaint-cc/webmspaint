@@ -190,6 +190,10 @@
   }
 }
 
+/* Hide content until the epilepsy gate runs on first load */
+/* (Removed gate-pending visibility mask — overlay covers content instead) */
+/* Gate mounting now handled in React (no SSR mask needed) */
+
 .no-scrollbar {
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none;    /* Firefox */
@@ -198,4 +202,223 @@
   width: 0px;
   height: 0px;
   display: none;            /* Chrome, Safari, Opera */
+}
+
+/* Disable deep-fry effects within a subtree (used by the epilepsy gate) */
+html.deep-fry .no-fry, html.deep-fry .no-fry * {
+  filter: none !important;
+  animation: none !important;
+  text-shadow: none !important;
+  mix-blend-mode: normal !important;
+}
+
+/* Deep Fry Mode — aggressively painful visuals */
+html.deep-fry body {
+  filter: saturate(600%) contrast(250%) hue-rotate(10deg) sepia(40%) brightness(120%);
+}
+
+html.deep-fry {
+  cursor: crosshair !important;
+}
+
+html.deep-fry *,
+html.deep-fry *::before,
+html.deep-fry *::after {
+  text-shadow: 0 0 2px #fff,
+    1px 0 0 rgba(255, 0, 68, 0.8),
+    -1px 0 0 rgba(0, 255, 213, 0.8),
+    0 1px 0 rgba(255, 255, 0, 0.7);
+  image-rendering: pixelated !important;
+  -webkit-font-smoothing: none;
+  -moz-osx-font-smoothing: auto;
+}
+
+/* Chaos effects */
+.chaos-shake {
+  animation: chaos-shake 90ms steps(2, end) 3;
+}
+
+@keyframes chaos-shake {
+  0% { transform: translate(0, 0) rotate(0.2deg); }
+  50% { transform: translate(2px, -2px) rotate(-0.2deg); }
+  100% { transform: translate(-1px, 1px) rotate(0.1deg); }
+}
+
+.chaos-glitch {
+  position: relative;
+  animation: chaos-glitch 250ms steps(2, end) 2;
+}
+
+@keyframes chaos-glitch {
+  0% { filter: hue-rotate(0deg) contrast(200%); }
+  50% { filter: hue-rotate(180deg) contrast(300%); transform: translateX(1px); }
+  100% { filter: hue-rotate(360deg) contrast(200%); transform: translateX(-1px); }
+}
+
+html.chaos-strobe body { filter: brightness(200%) contrast(300%) saturate(700%) hue-rotate(180deg) !important; }
+
+/* Persistent tilt for overall unease */
+body.chaos-tilt {
+  animation: chaos-tilt 2.4s ease-in-out infinite alternate;
+}
+@keyframes chaos-tilt {
+  from { transform: rotate(-0.8deg) skewX(-0.4deg); }
+  to   { transform: rotate(0.9deg)  skewX(0.6deg); }
+}
+
+/* Occasional full invert */
+html.chaos-invert body {
+  filter: invert(1) hue-rotate(180deg) saturate(300%) !important;
+}
+
+/* Rainbow text effect for random elements */
+.chaos-rainbow-text {
+  background: linear-gradient(90deg, #ff0044, #ffee00, #00ff99, #00ccff, #9933ff, #ff0044);
+  background-size: 300% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent !important;
+  animation: bg-sheen 1.2s linear infinite;
+}
+
+/* Falling FORTNITE stickers */
+@keyframes chaos-fall {
+  0% { transform: translateY(-10vh) rotate(-10deg); opacity: 0; }
+  10% { opacity: 1; }
+  100% { transform: translateY(110vh) rotate(15deg); opacity: 0; }
+}
+
+/* Scanlines + noise overlay */
+html.deep-fry body::before,
+html.deep-fry body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 2147483640;
+}
+
+/* Scanlines */
+html.deep-fry body::before {
+  background: repeating-linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.12) 0 1px,
+      rgba(0, 0, 0, 0) 1px 3px
+    );
+  mix-blend-mode: multiply;
+  animation: scan 0.8s linear infinite;
+}
+
+/* Color noise */
+html.deep-fry body::after {
+  background: 
+    radial-gradient(circle at 15% 20%, rgba(255,0,0,0.15), transparent 40%),
+    radial-gradient(circle at 80% 30%, rgba(0,255,200,0.15), transparent 40%),
+    radial-gradient(circle at 30% 75%, rgba(255,255,0,0.12), transparent 40%);
+  mix-blend-mode: screen;
+  animation: noise 90ms steps(2, end) infinite;
+}
+
+/* Fortnite everywhere: tile the whole world with FORTNITE */
+html.deep-fry body {
+  background-image:
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='480' height='240'>\
+      <rect width='100%' height='100%' fill='black'/>\
+      <text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-family='Impact, Arial Black, sans-serif' font-size='64' fill='%23ffffff' stroke='%2300ffee' stroke-width='2' opacity='0.2'>FORTNITE</text>\
+    </svg>"),
+    linear-gradient(45deg, #ff0044, #ff9900, #ffee00, #00ff99, #00ccff, #9933ff, #ff0044);
+  background-size: 480px 240px, 400% 400% !important;
+  background-repeat: repeat, no-repeat !important;
+  animation: bg-rainbow 6s linear infinite;
+}
+
+/* Links blink and jiggle */
+html.deep-fry a {
+  animation: blink 0.9s steps(2, start) infinite, jiggle 120ms infinite alternate;
+  text-decoration: underline wavy 3px #ff0044;
+}
+
+/* Headings wiggle and glow */
+html.deep-fry h1, html.deep-fry h2, html.deep-fry h3, html.deep-fry h4 {
+  position: relative;
+  filter: drop-shadow(0 0 8px #ff0080) drop-shadow(0 0 12px #00ffee);
+  animation: jiggle 140ms infinite alternate, hue 2.2s linear infinite;
+}
+
+/* Stamp FORTNITE behind all headings */
+html.deep-fry h1::before, html.deep-fry h2::before, html.deep-fry h3::before, html.deep-fry h4::before {
+  content: "FORTNITE";
+  position: absolute;
+  inset: auto auto 50% 50%;
+  transform: translate(-50%, 50%) rotate(-8deg);
+  font-size: 5rem;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  color: rgba(255,255,255,0.06);
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Images get chromatic aberration and harsh contrast */
+html.deep-fry img, html.deep-fry video, html.deep-fry canvas {
+  filter: contrast(220%) saturate(300%) brightness(110%) drop-shadow(2px 0 0 #ff0044) drop-shadow(-2px 0 0 #00ffee);
+  transform: translateZ(0);
+  animation: jitter 80ms steps(2, end) infinite;
+}
+
+/* Buttons are offensively loud */
+html.deep-fry button, html.deep-fry .btn, html.deep-fry [role="button"] {
+  background-image: linear-gradient(90deg, #ff0044, #ffee00, #00ff99, #00ccff, #9933ff);
+  background-size: 300% 100%;
+  color: #000 !important;
+  border: 3px solid #fff;
+  animation: bg-sheen 1.2s linear infinite;
+}
+
+@keyframes jitter {
+  0% { transform: translate(0, 0) rotate(0.1deg); }
+  100% { transform: translate(1px, -1px) rotate(-0.1deg); }
+}
+
+@keyframes jiggle {
+  from { transform: translateY(-1px) rotate(-0.2deg); }
+  to { transform: translateY(1px) rotate(0.2deg); }
+}
+
+@keyframes blink {
+  0%, 49% { opacity: 1; }
+  50%, 100% { opacity: 0.25; }
+}
+
+@keyframes hue {
+  to { filter: hue-rotate(360deg); }
+}
+
+@keyframes scan {
+  0% { background-position: 0 -4px; }
+  100% { background-position: 0 4px; }
+}
+
+@keyframes noise {
+  0% { transform: translate(0, 0); }
+  25% { transform: translate(-1px, 0); }
+  50% { transform: translate(1px, 1px); }
+  75% { transform: translate(0, -1px); }
+  100% { transform: translate(0, 0); }
+}
+
+@keyframes bg-rainbow {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 400% 50%; }
+}
+
+@keyframes bg-sheen {
+  0% { background-position: 0% 0%; }
+  100% { background-position: 300% 0%; }
+}
+
+/* CRT warp shimmer */
+@keyframes crt-warp {
+  0% { transform: scale(1.002) skewX(0.1deg) skewY(0.1deg); }
+  100% { transform: scale(1.01) skewX(-0.15deg) skewY(-0.1deg); }
 }
