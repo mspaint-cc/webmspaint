@@ -1,12 +1,11 @@
 "use client";
 
-import { useLanguage } from "@/contexts/LanguageContext";
+import { useLanguage, getTranslation } from "@/contexts/LanguageContext";
 import Link from "next/link";
 import { NavbarItem } from "@heroui/navbar";
 
 export function TranslatedNav({ noAccount }: { noAccount: boolean }) {
   const { translations } = useLanguage();
-  const t = translations;
 
   return (
     <>
@@ -15,7 +14,7 @@ export function TranslatedNav({ noAccount }: { noAccount: boolean }) {
           href="https://shop.mspaint.cc/"
           className="relative text-foreground transition-colors hover:text-neutral-200 after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-primary after:transition-all hover:after:w-full"
         >
-          {t?.nav?.shop || "Shop"}
+          {getTranslation(translations, "nav.shop") || "Shop"}
         </Link>
       </NavbarItem>
 
@@ -24,7 +23,9 @@ export function TranslatedNav({ noAccount }: { noAccount: boolean }) {
           href={noAccount ? "/sign-in" : "/subscription-dashboard"}
           className="relative text-foreground transition-colors hover:text-neutral-200 after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-primary after:transition-all hover:after:w-full"
         >
-          {noAccount ? (t?.nav?.signIn || "Sign In") : (t?.nav?.dashboard || "Dashboard")}
+          {noAccount
+            ? getTranslation(translations, "nav.signIn") || "Sign In"
+            : getTranslation(translations, "nav.dashboard") || "Dashboard"}
         </Link>
       </NavbarItem>
     </>

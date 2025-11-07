@@ -5,13 +5,13 @@ import React, { createContext, useContext, useState, useEffect } from "react";
 type Language = "en" | "de" | "pt" | "fr" | "ro";
 
 interface Translations {
-    [key: string]: string | Translations;
+    [key: string]: string | Translations | undefined;
 }
 
 interface LanguageContextType {
     language: Language;
     setLanguage: (lang: Language) => void;
-    translations: Translations;
+    translations: Record<string, unknown>;
 }
 
 const LanguageContext = createContext<LanguageContextType | undefined>(
@@ -20,7 +20,7 @@ const LanguageContext = createContext<LanguageContextType | undefined>(
 
 export function LanguageProvider({ children }: { children: React.ReactNode }) {
     const [language, setLanguageState] = useState<Language>("en");
-    const [translations, setTranslations] = useState<Translations>({});
+    const [translations, setTranslations] = useState<Record<string, unknown>>({});
 
     useEffect(() => {
         const savedLang = localStorage.getItem("language") as Language;
@@ -54,4 +54,19 @@ export function useLanguage() {
         throw new Error("useLanguage must be used within a LanguageProvider");
     }
     return context;
+}
+
+export function getTranslation(translations: Record<string, unknown>, path: string): string {
+    const keys = path.split(".");
+    let value: unknown = translations;
+
+    for (const key of keys) {
+        if (value && typeof value === "object" && key in value) {
+            value = (value as Record<string, unknown>)[key];
+        } else {
+            return "";
+        }
+    }
+
+    return typeof value === "string" ? value : "";
 }
