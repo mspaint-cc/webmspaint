@@ -5,7 +5,7 @@ import React, { createContext, useContext, useState, useEffect } from "react";
 type Language = "en" | "de" | "pt" | "fr" | "ro";
 
 interface Translations {
-    [key: string]: any;
+    [key: string]: string | Translations;
 }
 
 interface LanguageContextType {
