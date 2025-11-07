@@ -1,0 +1,70 @@
+{
+  "nav": {
+    "shop": "Loja",
+    "signIn": "Entrar",
+    "dashboard": "Painel"
+  },
+  "hero": {
+    "title": "mspaint",
+    "bestScript": "O melhor",
+    "script": "script"
+  },
+  "executors": {
+    "title": "Suportando seus executores favoritos",
+    "andMore": "E muitos mais..."
+  },
+  "games": {
+    "title": "mspaint suporta oficialmente {count} jogos",
+    "subtitle": "qualidade & quantidade"
+  },
+  "languages": {
+    "title": "mspaint está traduzido em {count} idiomas",
+    "subtitle": "acessibilidade feita corretamente"
+  },
+  "stats": {
+    "usedBy": "Usado por",
+    "over": "mais de",
+    "people": "pessoas",
+    "evenBy": "E até por",
+    "kardin": "Kardin Hong"
+  },
+  "reviews": {
+    "title": "Veja o que as pessoas dizem sobre"
+  },
+  "faq": {
+    "title": "FAQ",
+    "fullFaq": "O FAQ completo está no",
+    "discordServer": "Servidor Discord",
+    "q1": {
+      "question": "Como faço para ser aprovado?",
+      "answer": "Você pode ser aprovado comprando uma chave na",
+      "shop": "loja"
+    },
+    "q2": {
+      "question": "Onde posso relatar bugs e sugerir recursos?",
+      "answer": "Você pode relatar bugs e sugerir recursos no servidor Discord."
+    },
+    "q3": {
+      "question": "Isso funciona no celular?",
+      "answer": "Sim. mspaint funciona no celular."
+    },
+    "q4": {
+      "question": "Não consigo fechar a GUI. Como posso corrigir isso?",
+      "answer": "Feche a GUI pressionando a tecla shift no lado direito do seu teclado."
+    },
+    "q5": {
+      "question": "Quais jogos são suportados?",
+      "answer": "Atualmente, {games} são suportados."
+    },
+    "q6": {
+      "question": "Como faço para avaliar o script?",
+      "answer": "Você pode avaliar o script usando o",
+      "command": "/review",
+      "commandText": "comando no servidor discord."
+    }
+  },
+  "footer": {
+    "madeBy": "Site feito por upio",
+    "disclaimer": "Este software não é afiliado, associado, autorizado, endossado ou de qualquer forma oficialmente conectado com Roblox ou Microsoft ou qualquer uma de suas subsidiárias ou afiliadas."
+  }
+}
