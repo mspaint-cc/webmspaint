@@ -5,7 +5,9 @@ import { Button } from "./ui/button";
 import Image from "next/image";
 import { useState } from "react";
 
-const languages = [
+type LanguageCode = "en" | "de" | "pt" | "fr" | "ro";
+
+const languages: { code: LanguageCode; name: string; flag: string }[] = [
   { code: "en", name: "English", flag: "https://flagcdn.com/w40/gb.png" },
   { code: "de", name: "Deutsch", flag: "https://flagcdn.com/w40/de.png" },
   { code: "pt", name: "Português", flag: "https://flagcdn.com/w40/br.png" },
@@ -31,7 +33,7 @@ export default function LanguageSwitcher() {
                 variant="ghost"
                 size="sm"
                 onClick={() => {
-                  setLanguage(lang.code as any);
+                  setLanguage(lang.code);
                   setIsOpen(false);
                 }}
                 className="flex items-center gap-2 justify-start hover:bg-primary/10"
