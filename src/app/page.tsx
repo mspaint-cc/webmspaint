@@ -1,28 +1,32 @@
 import { BlurFade } from "@/components/magicui/blur-fade";
 import DotPattern from "@/components/magicui/dot-pattern";
-import NumberTicker from "@/components/magicui/number-ticker";
 import Safari from "@/components/magicui/safari";
 
 import { lazy } from "react";
 const ReviewMarquee = lazy(() => import("@/components/reviews"));
+import { TranslatedNav } from "@/components/TranslatedNav";
+import { TranslatedHeroSubtitle } from "@/components/TranslatedHero";
+import {
+  TranslatedExecutorsTitle,
+  TranslatedExecutorsMore,
+  TranslatedGamesTitle,
+  TranslatedGamesSubtitle,
+  TranslatedLanguagesTitle,
+  TranslatedLanguagesSubtitle,
+} from "@/components/TranslatedSections";
+import { TranslatedStatsTitle, TranslatedStatsKardin } from "@/components/TranslatedStats";
+import { TranslatedReviewsTitle } from "@/components/TranslatedReviews";
+import { TranslatedFAQTitle, TranslatedFAQIntro, TranslatedFAQAccordion } from "@/components/TranslatedFAQ";
+import { TranslatedFooter } from "@/components/TranslatedFooter";
 
 import { MacbookComponent } from "@/components/ui/macbook";
 import { Separator } from "@/components/ui/separator";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
-import { Navbar, NavbarBrand, NavbarContent, NavbarItem } from "@heroui/navbar";
+import { Navbar, NavbarBrand, NavbarContent } from "@heroui/navbar";
 import Image from "next/image";
 import Iphone15Pro from "@/components/magicui/iphone-15-pro";
-import WordRotate from "@/components/ui/word-rotate";
-import WordFadeIn from "@/components/ui/word-fade-in";
 import GameCard from "@/components/game-card";
-import { Highlighter } from "@/components/magicui/highlighter";
 import { Suspense } from "react";
 import { Input } from "@/components/ui/input";
 import CopyButton from "@/components/copy-button";
@@ -91,23 +95,7 @@ export default async function Home() {
         </NavbarBrand>
 
         <NavbarContent justify="end" className="mt-4 mb-4">
-          <NavbarItem>
-            <Link
-              href="https://shop.mspaint.cc/"
-              className="relative text-foreground transition-colors hover:text-neutral-200 after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-primary after:transition-all hover:after:w-full"
-            >
-              Shop
-            </Link>
-          </NavbarItem>
-
-          <NavbarItem>
-            <Link
-              href={noAccount ? "/sign-in" : "/subscription-dashboard"}
-              className="relative text-foreground transition-colors hover:text-neutral-200 after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-primary after:transition-all hover:after:w-full"
-            >
-              {noAccount ? "Sign In" : "Dashboard"}
-            </Link>
-          </NavbarItem>
+          <TranslatedNav noAccount={noAccount} />
         </NavbarContent>
       </Navbar>
 
@@ -147,10 +135,7 @@ export default async function Home() {
                 </BlurFade>
 
                 <BlurFade delay={0.2 + 3 * 0.05}>
-                  <div className="text-2xl flex flex-row justify-center items-center  gap-2">
-                    <span className="font-bold">The best</span>{" "}
-                    <WordRotate duration={2500} words={gamesList} /> script
-                  </div>
+                  <TranslatedHeroSubtitle words={gamesList} />
                 </BlurFade>
 
                 <BlurFade delay={0.2 + 4 * 0.05}>
@@ -201,7 +186,7 @@ export default async function Home() {
               >
                 <BlurFade delay={0.2 + 1 * 0.05} inView>
                   <h1 className="text-2xl font-bold mt-[5rem] text-center px-5">
-                    Supporting your favorite executors
+                    <TranslatedExecutorsTitle />
                   </h1>
                 </BlurFade>
 
@@ -245,7 +230,7 @@ export default async function Home() {
 
                 <BlurFade delay={0.2 + 7 * 0.05} inView>
                   <h4 className="text-muted-foreground text-sm mt-5">
-                    And many more...
+                    <TranslatedExecutorsMore />
                   </h4>
                 </BlurFade>
               </div>
@@ -258,21 +243,13 @@ export default async function Home() {
           id="games"
           className="flex flex-col items-center mt-[-15vh] mb-[10vh] text-center overflow-hidden relative"
         >
-          <WordFadeIn
-            className="text-3xl md:text-3xl"
-            words={`mspaint officially supports ${
-              Object.keys(gamesList).length
-            } games`}
-            inView
-          />
+          <div className="text-3xl md:text-3xl">
+            <TranslatedGamesTitle count={Object.keys(gamesList).length} />
+          </div>
           <BlurFade className="mb-[15px]" delay={0.2 + 1 * 0.05} inView>
-            <WordFadeIn
-              className="text-xl md:text-xl font-normal"
-              words={`quality & quantity`}
-              inView
-              initialDelay={0.15 * 6}
-              delay={0.35}
-            />
+            <div className="text-xl md:text-xl font-normal">
+              <TranslatedGamesSubtitle />
+            </div>
           </BlurFade>
 
           <BlurFade
@@ -392,21 +369,13 @@ export default async function Home() {
         </UIStateProvider>
 
         <div className="flex flex-col items-center text-center py-28">
-          <WordFadeIn
-            className="text-3xl md:text-3xl"
-            words={`mspaint is translated in ${
-              Object.keys(languageData).length - 1
-            } languages`}
-            inView
-          />
+          <div className="text-3xl md:text-3xl">
+            <TranslatedLanguagesTitle count={Object.keys(languageData).length - 1} />
+          </div>
           <BlurFade delay={0.2 + 1 * 0.05} inView>
-            <WordFadeIn
-              className="text-xl md:text-xl font-normal"
-              words={`accessibility done right`}
-              inView
-              initialDelay={0.15 * 6}
-              delay={0.25}
-            />
+            <div className="text-xl md:text-xl font-normal">
+              <TranslatedLanguagesSubtitle />
+            </div>
           </BlurFade>
 
           <div className="relative flex w-full flex-col items-center justify-center overflow-hidden mt-10 mb-10">
@@ -478,18 +447,8 @@ export default async function Home() {
         <div className="flex flex-col items-center justify-center px-2 text-center">
           <BlurFade delay={0.2 + 1 * 0.05} className="mb-5" inView>
             <h1 className="text-3xl font-bold text-center flex flex-col">
-              <span>
-                Used by{" "}
-                <span className="font-bold">
-                  over{" "}
-                  <NumberTicker value={guildData.approximate_member_count} />+
-                  people
-                </span>
-              </span>
-              <span className="text-muted-foreground text-lg">
-                And even by{" "}
-                <span className="font-bold text-white">Kardin Hong</span>
-              </span>
+              <TranslatedStatsTitle count={guildData.approximate_member_count} />
+              <TranslatedStatsKardin />
             </h1>
           </BlurFade>
           <BlurFade delay={0.2 + 1.5 * 0.05} inView>
@@ -517,114 +476,23 @@ export default async function Home() {
           <Separator className="mt-[2.5rem] w-[55vw]" />
 
           <h1 id="reviews" className="text-2xl mt-[2.5rem] text-center">
-            Here&apos;s what people say about{" "}
-            <Highlighter action="underline" color="#FF9800" isView>
-              mspaint
-            </Highlighter>
+            <TranslatedReviewsTitle />
           </h1>
 
           <Suspense fallback={<div>Loading...</div>}>
             <ReviewMarquee />
           </Suspense>
 
-          <h1 className="text-2xl font-bold  mt-[2.5rem] text-center">FAQ</h1>
-          <p className="text-muted-foreground">
-            The full FAQ is in the{" "}
-            <Link
-              target="_blank"
-              className="text-white-500 underline"
-              href={"https://discord.gg/mspaint"}
-            >
-              Discord Server
-            </Link>
-          </p>
+          <h1 className="text-2xl font-bold  mt-[2.5rem] text-center">
+            <TranslatedFAQTitle />
+          </h1>
+          <TranslatedFAQIntro />
 
-          <Accordion
-            id="faq"
-            type="single"
-            collapsible
-            className="max-w-[1000px] w-[50vw] max-md:w-[75vw]"
-          >
-            <AccordionItem value="item-1">
-              <AccordionTrigger>How do I get whitelisted?</AccordionTrigger>
-              <AccordionContent>
-                You can get whitelisted by purchasing a key from the{" "}
-                <Link
-                  className="text-white-500 underline"
-                  href={"https://shop.mspaint.cc/"}
-                >
-                  shop
-                </Link>
-              </AccordionContent>
-            </AccordionItem>
-
-            <AccordionItem value="item-2">
-              <AccordionTrigger>
-                Where can I report bugs and suggest features?
-              </AccordionTrigger>
-              <AccordionContent>
-                You can report bugs and suggest features in the Discord server.
-              </AccordionContent>
-            </AccordionItem>
-
-            <AccordionItem value="item-3">
-              <AccordionTrigger>Does this work on mobile?</AccordionTrigger>
-              <AccordionContent>Yes. mspaint works on mobile.</AccordionContent>
-            </AccordionItem>
-
-            <AccordionItem value="item-4">
-              <AccordionTrigger>
-                I can&apos;t close the GUI. How can I fix it?
-              </AccordionTrigger>
-              <AccordionContent>
-                Close out of the GUI by pressing the shift on the right side of
-                your keyboard.
-              </AccordionContent>
-            </AccordionItem>
-
-            <AccordionItem value="item-5">
-              <AccordionTrigger>What games are supported?</AccordionTrigger>
-              <AccordionContent>
-                As of right now,{" "}
-                {gamesList.slice(0, -1).join(", ") +
-                  " and " +
-                  gamesList.slice(-1)}{" "}
-                are supported.
-              </AccordionContent>
-            </AccordionItem>
-
-            <AccordionItem value="item-6">
-              <AccordionTrigger>How do I review the script?</AccordionTrigger>
-              <AccordionContent>
-                You can review the script by using the{" "}
-                <span className="bg-blue-400/70 px-1 py-[0.5px] rounded-sm font-bold">
-                  /review
-                </span>{" "}
-                command in the discord server.
-              </AccordionContent>
-            </AccordionItem>
-          </Accordion>
+          <TranslatedFAQAccordion gamesList={gamesList} />
 
           <Separator className="mt-[5rem] w-screen" />
 
-          <div className="px-10 py-6 w-screen flex flex-row justify-between items-center max-md:justify-center max-md:flex-col">
-            <div className="px-2 py-2 flex flex-row items-center gap-2">
-              <Image alt="mspaint" src="/icon.png" width={25} height={25} />
-              <div>
-                <p className="text-xs text-left">mspaint</p>
-                <p className="text-muted-foreground text-xs">
-                  Site made by upio
-                </p>
-              </div>
-            </div>
-            <p className="text-muted-foreground text-xs px-2 py-2 text-right max-md:text-center max-md:mt-5">
-              This software is not affiliated, associated, authorized, endorsed
-              by, or
-              <br />
-              in any way officially connected with Roblox or Microsoft or any of
-              its subsidiaries or its affiliates.
-            </p>
-          </div>
+          <TranslatedFooter />
         </div>
       </main>
     </>

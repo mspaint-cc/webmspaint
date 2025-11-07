@@ -1,0 +1,70 @@
+{
+  "nav": {
+    "shop": "Boutique",
+    "signIn": "Se connecter",
+    "dashboard": "Tableau de bord"
+  },
+  "hero": {
+    "title": "mspaint",
+    "bestScript": "Le meilleur",
+    "script": "script"
+  },
+  "executors": {
+    "title": "Prend en charge vos exécuteurs préférés",
+    "andMore": "Et bien plus encore..."
+  },
+  "games": {
+    "title": "mspaint prend officiellement en charge {count} jeux",
+    "subtitle": "qualité & quantité"
+  },
+  "languages": {
+    "title": "mspaint est traduit en {count} langues",
+    "subtitle": "accessibilité bien faite"
+  },
+  "stats": {
+    "usedBy": "Utilisé par",
+    "over": "plus de",
+    "people": "personnes",
+    "evenBy": "Et même par",
+    "kardin": "Kardin Hong"
+  },
+  "reviews": {
+    "title": "Voici ce que les gens disent de"
+  },
+  "faq": {
+    "title": "FAQ",
+    "fullFaq": "La FAQ complète est sur le",
+    "discordServer": "Serveur Discord",
+    "q1": {
+      "question": "Comment puis-je être approuvé?",
+      "answer": "Vous pouvez être approuvé en achetant une clé dans la",
+      "shop": "boutique"
+    },
+    "q2": {
+      "question": "Où puis-je signaler des bugs et suggérer des fonctionnalités?",
+      "answer": "Vous pouvez signaler des bugs et suggérer des fonctionnalités sur le serveur Discord."
+    },
+    "q3": {
+      "question": "Est-ce que ça marche sur mobile?",
+      "answer": "Oui. mspaint fonctionne sur mobile."
+    },
+    "q4": {
+      "question": "Je ne peux pas fermer l'interface. Comment puis-je résoudre ce problème?",
+      "answer": "Fermez l'interface en appuyant sur la touche shift du côté droit de votre clavier."
+    },
+    "q5": {
+      "question": "Quels jeux sont pris en charge?",
+      "answer": "Actuellement, {games} sont pris en charge."
+    },
+    "q6": {
+      "question": "Comment puis-je évaluer le script?",
+      "answer": "Vous pouvez évaluer le script en utilisant la",
+      "command": "/review",
+      "commandText": "commande sur le serveur discord."
+    }
+  },
+  "footer": {
+    "madeBy": "Site créé par upio",
+    "disclaimer": "Ce logiciel n'est pas affilié, associé, autorisé, approuvé par ou de quelque manière que ce soit officiellement connecté avec Roblox ou Microsoft ou l'une de ses filiales ou sociétés affiliées."
+  }
+}

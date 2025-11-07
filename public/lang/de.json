@@ -1,0 +1,70 @@
+{
+  "nav": {
+    "shop": "Shop",
+    "signIn": "Anmelden",
+    "dashboard": "Dashboard"
+  },
+  "hero": {
+    "title": "mspaint",
+    "bestScript": "Das beste",
+    "script": "Skript"
+  },
+  "executors": {
+    "title": "Unterstützt deine Lieblings-Executors",
+    "andMore": "Und viele mehr..."
+  },
+  "games": {
+    "title": "mspaint unterstützt offiziell {count} Spiele",
+    "subtitle": "Qualität & Quantität"
+  },
+  "languages": {
+    "title": "mspaint ist in {count} Sprachen übersetzt",
+    "subtitle": "Barrierefreiheit richtig gemacht"
+  },
+  "stats": {
+    "usedBy": "Verwendet von",
+    "over": "über",
+    "people": "Personen",
+    "evenBy": "Und sogar von",
+    "kardin": "Kardin Hong"
+  },
+  "reviews": {
+    "title": "Das sagen die Leute über"
+  },
+  "faq": {
+    "title": "FAQ",
+    "fullFaq": "Die vollständige FAQ findest du auf dem",
+    "discordServer": "Discord Server",
+    "q1": {
+      "question": "Wie werde ich freigeschaltet?",
+      "answer": "Du kannst freigeschaltet werden, indem du einen Schlüssel im",
+      "shop": "Shop kaufst"
+    },
+    "q2": {
+      "question": "Wo kann ich Fehler melden und Funktionen vorschlagen?",
+      "answer": "Du kannst Fehler melden und Funktionen auf dem Discord Server vorschlagen."
+    },
+    "q3": {
+      "question": "Funktioniert das auf dem Handy?",
+      "answer": "Ja. mspaint funktioniert auf dem Handy."
+    },
+    "q4": {
+      "question": "Ich kann die GUI nicht schließen. Wie kann ich das beheben?",
+      "answer": "Schließe die GUI, indem du die Umschalttaste auf der rechten Seite deiner Tastatur drückst."
+    },
+    "q5": {
+      "question": "Welche Spiele werden unterstützt?",
+      "answer": "Derzeit werden {games} unterstützt."
+    },
+    "q6": {
+      "question": "Wie kann ich das Skript bewerten?",
+      "answer": "Du kannst das Skript bewerten, indem du den",
+      "command": "/review",
+      "commandText": "Befehl auf dem Discord Server verwendest."
+    }
+  },
+  "footer": {
+    "madeBy": "Seite erstellt von upio",
+    "disclaimer": "Diese Software ist nicht verbunden, assoziiert, autorisiert, unterstützt von oder in irgendeiner Weise offiziell mit Roblox oder Microsoft oder einer ihrer Tochtergesellschaften oder verbundenen Unternehmen verbunden."
+  }
+}

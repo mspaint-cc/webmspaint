@@ -6,6 +6,8 @@ import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
 import { gamesList } from "@/data/games";
 import type { ReactNode } from "react";
+import { LanguageProvider } from "@/contexts/LanguageContext";
+import LanguageSwitcher from "@/components/LanguageSwitcher";
 
 const description =
   "mspaint is the best premium roblox script hub supporting games such as doors, 3008, room & doors, pressure, fisch, build a boat for treasure, grace and murder mystery 2";
@@ -58,9 +60,12 @@ export default function RootLayout({
           enableSystem={false}
           disableTransitionOnChange
         >
-          {children}
-          <Toaster richColors />
-          <Analytics />
+          <LanguageProvider>
+            {children}
+            <LanguageSwitcher />
+            <Toaster richColors />
+            <Analytics />
+          </LanguageProvider>
         </ThemeProvider>
       </body>
     </html>
