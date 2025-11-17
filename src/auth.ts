@@ -2,6 +2,7 @@ import NextAuth from "next-auth"
 import Discord from "next-auth/providers/discord"
  
 export const { handlers, signIn, signOut, auth } = NextAuth({
+  secret: process.env.AUTH_SECRET || "development-secret-key-change-in-production",
   providers: [Discord],
   callbacks: {
     async jwt({ token, profile }) {
@@ -13,8 +14,7 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
     },
 
     async session({ session, token }) {
-        // @ts-expect-error (id is added in the jwt callback)
-        session.user.id = token.id;
+        session.user.id = token.id as string;
 
         return session;
     },

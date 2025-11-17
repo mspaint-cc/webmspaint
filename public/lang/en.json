@@ -1,0 +1,70 @@
+{
+  "nav": {
+    "shop": "Shop",
+    "signIn": "Sign In",
+    "dashboard": "Dashboard"
+  },
+  "hero": {
+    "title": "mspaint",
+    "bestScript": "The best",
+    "script": "script"
+  },
+  "executors": {
+    "title": "Supporting your favorite executors",
+    "andMore": "And many more..."
+  },
+  "games": {
+    "title": "mspaint officially supports {count} games",
+    "subtitle": "quality & quantity"
+  },
+  "languages": {
+    "title": "mspaint is translated in {count} languages",
+    "subtitle": "accessibility done right"
+  },
+  "stats": {
+    "usedBy": "Used by",
+    "over": "over",
+    "people": "people",
+    "evenBy": "And even by",
+    "kardin": "Kardin Hong"
+  },
+  "reviews": {
+    "title": "Here's what people say about"
+  },
+  "faq": {
+    "title": "FAQ",
+    "fullFaq": "The full FAQ is in the",
+    "discordServer": "Discord Server",
+    "q1": {
+      "question": "How do I get whitelisted?",
+      "answer": "You can get whitelisted by purchasing a key from the",
+      "shop": "shop"
+    },
+    "q2": {
+      "question": "Where can I report bugs and suggest features?",
+      "answer": "You can report bugs and suggest features in the Discord server."
+    },
+    "q3": {
+      "question": "Does this work on mobile?",
+      "answer": "Yes. mspaint works on mobile."
+    },
+    "q4": {
+      "question": "I can't close the GUI. How can I fix it?",
+      "answer": "Close out of the GUI by pressing the shift on the right side of your keyboard."
+    },
+    "q5": {
+      "question": "What games are supported?",
+      "answer": "As of right now, {games} are supported."
+    },
+    "q6": {
+      "question": "How do I review the script?",
+      "answer": "You can review the script by using the",
+      "command": "/review",
+      "commandText": "command in the discord server."
+    }
+  },
+  "footer": {
+    "madeBy": "Site made by upio",
+    "disclaimer": "This software is not affiliated, associated, authorized, endorsed by, or in any way officially connected with Roblox or Microsoft or any of its subsidiaries or its affiliates."
+  }
+}

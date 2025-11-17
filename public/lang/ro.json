@@ -1,0 +1,70 @@
+{
+  "nav": {
+    "shop": "Magazin",
+    "signIn": "Autentificare",
+    "dashboard": "Panou de control"
+  },
+  "hero": {
+    "title": "mspaint",
+    "bestScript": "Cel mai bun",
+    "script": "script"
+  },
+  "executors": {
+    "title": "Suportă executorii tăi preferați",
+    "andMore": "Și multe altele..."
+  },
+  "games": {
+    "title": "mspaint suportă oficial {count} jocuri",
+    "subtitle": "calitate & cantitate"
+  },
+  "languages": {
+    "title": "mspaint este tradus în {count} limbi",
+    "subtitle": "accesibilitate făcută corect"
+  },
+  "stats": {
+    "usedBy": "Folosit de",
+    "over": "peste",
+    "people": "persoane",
+    "evenBy": "Și chiar de",
+    "kardin": "Kardin Hong"
+  },
+  "reviews": {
+    "title": "Iată ce spun oamenii despre"
+  },
+  "faq": {
+    "title": "Întrebări frecvente",
+    "fullFaq": "Întrebările frecvente complete sunt pe",
+    "discordServer": "Serverul Discord",
+    "q1": {
+      "question": "Cum pot fi aprobat?",
+      "answer": "Poți fi aprobat cumpărând o cheie din",
+      "shop": "magazin"
+    },
+    "q2": {
+      "question": "Unde pot raporta bug-uri și sugera funcționalități?",
+      "answer": "Poți raporta bug-uri și sugera funcționalități pe serverul Discord."
+    },
+    "q3": {
+      "question": "Funcționează pe mobil?",
+      "answer": "Da. mspaint funcționează pe mobil."
+    },
+    "q4": {
+      "question": "Nu pot închide interfața. Cum pot rezolva asta?",
+      "answer": "Închide interfața apăsând tasta shift din partea dreaptă a tastaturii tale."
+    },
+    "q5": {
+      "question": "Ce jocuri sunt suportate?",
+      "answer": "În prezent, {games} sunt suportate."
+    },
+    "q6": {
+      "question": "Cum pot evalua scriptul?",
+      "answer": "Poți evalua scriptul folosind",
+      "command": "/review",
+      "commandText": "comanda pe serverul discord."
+    }
+  },
+  "footer": {
+    "madeBy": "Site creat de upio",
+    "disclaimer": "Acest software nu este afiliat, asociat, autorizat, aprobat de sau în vreun fel conectat oficial cu Roblox sau Microsoft sau oricare dintre filialele sau afiliații săi."
+  }
+}
