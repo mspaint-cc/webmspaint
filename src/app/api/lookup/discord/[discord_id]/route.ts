@@ -33,7 +33,7 @@ export async function GET(request: NextRequest, slug: { params: Promise<{ discor
         );
     }
 
-    let avatarUrl = `https://cdn.discordapp.com/embed/avatars/${(BigInt(data.id) >> 22n) % 6n}.png`; // generate default avatar url and parsing the snowflake to an index
+    let avatarUrl = `https://cdn.discordapp.com/embed/avatars/${(BigInt(data.id) >> BigInt(22)) % BigInt(6)}.png`; // generate default avatar url and parsing the snowflake to an index
 
     if (data.avatar) { // check if avatar exists
         const format = data.avatar.startsWith("a_") ? "gif" : "png"; // check if the avatar is an animated image
