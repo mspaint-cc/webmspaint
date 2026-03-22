@@ -12,7 +12,7 @@ export const executorsList = [
     "bunni.lol",
     "Wave",
 
-    "Solara",
+    // "Solara",
 
     // Android
     "Delta (Android)",

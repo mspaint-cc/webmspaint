@@ -222,13 +222,13 @@ export default async function Home() {
                     url={"#"}
                   />
 
-                  <Executor
+                  {/*<Executor
                     name={"Solara"}
                     image={
                       "https://q2p0njok3b.ufs.sh/f/Z155p1jPvLAsKTjfEJrg4CbGHLXhvIFxQV5pY6qirBw2Ju7n"
                     }
                     url={"#"}
-                  />
+                  />*/}
 
                   <Executor
                     name={"Delta"}
